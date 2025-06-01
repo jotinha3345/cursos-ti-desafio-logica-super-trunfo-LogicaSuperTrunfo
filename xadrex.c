@@ -1,4 +1,4 @@
- #include <stdio.h>  // Biblioteca padrão para entrada e saída de dados
+#include <stdio.h>  // Biblioteca padrão para entrada e saída de dados
 
 int main() {  // Função principal onde o programa começa
 
@@ -10,30 +10,49 @@ int main() {  // Função principal onde o programa começa
     // ---------- MOVIMENTO DA TORRE ----------
     // Simula o movimento da torre 5 casas para a direita
     // Utiliza a estrutura de repetição "for"
-    printf("Movimento da Torre:\n");  // Imprime o título da seção
-    for (int i = 0; i < casasTorre; i++) {  // Repetição de 0 até menor que 5
-        printf("Direita\n");  // Imprime a direção "Direita" a cada passo
+    printf("Movimento da Torre:\n");
+    for (int i = 0; i < casasTorre; i++) {
+        printf("Direita\n");
     }
 
     // ---------- MOVIMENTO DO BISPO ----------
     // Simula o movimento do bispo 5 casas na diagonal para cima e à direita
     // Utiliza a estrutura de repetição "while"
-    printf("\nMovimento do Bispo:\n");  // Imprime o título da seção
-    int i = 0;  // Inicializa variável de controle
-    while (i < casasBispo) {  // Enquanto i for menor que 5
-        printf("Cima Direita\n");  // Imprime a direção "Cima Direita"
-        i++;  // Incrementa i para avançar para a próxima casa
+    printf("\nMovimento do Bispo:\n");
+    int i = 0;
+    while (i < casasBispo) {
+        printf("Cima Direita\n");
+        i++;
     }
 
     // ---------- MOVIMENTO DA RAINHA ----------
     // Simula o movimento da rainha 8 casas para a esquerda
     // Utiliza a estrutura de repetição "do-while"
-    printf("\nMovimento da Rainha:\n");  // Imprime o título da seção
-    int j = 0;  // Inicializa variável de controle
+    printf("\nMovimento da Rainha:\n");
+    int j = 0;
     do {
-        printf("Esquerda\n");  // Imprime a direção "Esquerda"
-        j++;  // Incrementa j
-    } while (j < casasRainha);  // Repete enquanto j for menor que 8
+        printf("Esquerda\n");
+        j++;
+    } while (j < casasRainha);
 
-    return 0;  // Indica que o programa terminou com sucesso
+    // ---------- MOVIMENTO DO CAVALO ----------
+    // Simula o movimento do Cavalo: duas casas para baixo e uma para a esquerda
+    printf("\nMovimento do Cavalo:\n");
+
+    int movimentosParaBaixo = 2;  // Número de casas para baixo
+    int movimentosParaEsquerda = 1;  // Número de casas para esquerda
+
+    // Loop externo usando 'for' para as casas para baixo
+    for (int k = 0; k < movimentosParaBaixo; k++) {
+        printf("Baixo\n");
+    }
+
+    // Loop interno usando 'while' para a casa para esquerda
+    int l = 0;
+    while (l < movimentosParaEsquerda) {
+        printf("Esquerda\n");
+        l++;
+    }
+
+    return 0;
 }
